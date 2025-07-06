@@ -49,8 +49,7 @@ function SampleForm() {
     
     const handleSubmit = (e) => { 
         e.preventDefault(); 
-        alert("Account created!"); 
-        
+        //alert("Account created!"); 
         const formData = {
             firstName,
             lastName,
@@ -58,10 +57,8 @@ function SampleForm() {
             password: password.value,
             role,
         };
-
         // Formデータを state に渡して遷移
         navigate("/generateai", { state: formData });
-
         clearForm(); 
     }; 
  
