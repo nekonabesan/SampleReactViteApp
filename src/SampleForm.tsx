@@ -63,7 +63,7 @@ function SampleForm() {
     }; 
  
     return ( 
-        <div className="App h-screen w-screen flex justify-center items-center"> 
+        <div className="App h-screen w-screen flex justify-center items-center">
             <form onSubmit={handleSubmit}> 
             <fieldset> 
                 <h2>Sign Up</h2> 
@@ -129,10 +129,12 @@ function SampleForm() {
                     <option value="individual">Individual</option> 
                     <option value="business">Business</option> 
                 </select> 
-                </div> 
-                <button type="submit" disabled={!getIsFormValid()}> 
-                Create account 
-                </button> 
+                </div>
+                <div className="flex justify-center items-center">
+                    <button type="submit" disabled={!getIsFormValid()} className='bg-blue-500 text-white rounded'> 
+                    Create account 
+                    </button> 
+                </div>
             </fieldset> 
             </form> 
         </div> 

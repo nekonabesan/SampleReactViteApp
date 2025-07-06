@@ -11,6 +11,19 @@ sudo docker-compose run --rm sample-app npm install
 sudo docker-compose run --rm sample-app npm install react-router-dom
 ```
 
+```
+sudo docker-compose run --rm sample-app npm install -D tailwindcss@3.4.17 postcss autoprefixer
+```
+
+```
+
+sudo docker-compose run --rm sample-app npx tailwindcss init -p
+```
+
+```
+sudo docker-compose build
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

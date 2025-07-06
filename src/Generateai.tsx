@@ -20,11 +20,16 @@ export default function Generateai() {
 
   if (loading) {
     return (
-      <div className="h-screen w-screen flex items-center justify-center h-screen">
-        <div className="animate-spin rounded-full h-16 w-16 border-4 border-blue-500 border-t-transparent" />
+      <div className="h-screen w-screen flex flex-col items-center justify-center">
+        <div className="animate-spin rounded-full h-16 w-16 border-4 border-blue-500 border-t-transparent mb-4" />
+        <div className="text-lg text-gray-700 flex items-center space-x-1">
+          <span>考え中</span>
+          <span className="after:content-[''] after:animate-dots" />
+        </div>
       </div>
     );
   }
+  
 
   return (
     <div className="h-screen w-screen flex justify-center items-center">
