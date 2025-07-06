@@ -15,16 +15,17 @@ const PasswordErrorMessage = () => {
  
 function SampleForm() {
     const navigate = useNavigate();
+    const location = useLocation();
+    const previousData = location.state;
 
-    const [firstName, setFirstName] = useState(""); 
-    const [lastName, setLastName] = useState(""); 
-    const [email, setEmail] = useState(""); 
-    const [password, setPassword] = useState({ 
-    value: "", 
-    isTouched: false, 
+    const [firstName, setFirstName] = useState(previousData?.firstName || "");
+    const [lastName, setLastName] = useState(previousData?.lastName || "");
+    const [email, setEmail] = useState(previousData?.email || "");
+    const [password, setPassword] = useState({
+        value: previousData?.password || "",
+        isTouched: false,
     });
-    
-    const [role, setRole] = useState("role"); 
+    const [role, setRole] = useState(previousData?.role || "role");
 
     const getIsFormValid = () => { 
     return ( 
